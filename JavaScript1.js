@@ -58,7 +58,7 @@ function Search(){
 
     // Text Input 
 
-    if (document.getElementById("Text1").value != null){
+    if (document.getElementById("Text1").value != ""){
      Input = document.getElementById("Text1").value;
   
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
@@ -72,7 +72,7 @@ function Search(){
 
     // FILE INPUT 
 
-    if (document.getElementById("File1").value != null){
+    if (document.getElementById("File1").value != ""){
         Input = document.getElementById("File1").value;
      
        var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
@@ -87,7 +87,7 @@ function Search(){
 
     // DOMAIN INPUT
 
-    if (document.getElementById("Domain1").value != null){
+    if (document.getElementById("Domain1").value != ""){
         Input = document.getElementById("Domain1").value;
      
        var api = 'https://api.xforce.ibmcloud.com/url/'
@@ -102,7 +102,7 @@ function Search(){
 
     // HASH INPUT 
 
-    if (document.getElementById("Hash1").value != null){
+    if (document.getElementById("Hash1").value != ""){
         Input = document.getElementById("Hash1").value;
      
        var api = 'https://api.xforce.ibmcloud.com/malware/'
