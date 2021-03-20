@@ -51,7 +51,7 @@ function pretraziHash() {
 function Search(){  
     input =select('#Text1');
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + input.value ;
+    var url = api + input.value();
    fetch(url, {method:'GET', 
         headers: headers,
        })
