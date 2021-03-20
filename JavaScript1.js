@@ -49,9 +49,9 @@ function pretraziHash() {
     }
 }
 function Search(){  
-   // input =select('#Text1');
+    input =select('#Text1');
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + '178.220.106.135' ;
+    var url = api + input.value ;
    fetch(url, {method:'GET', 
         headers: headers,
        })
