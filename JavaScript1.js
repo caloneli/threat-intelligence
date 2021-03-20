@@ -1,11 +1,6 @@
-﻿function pretraziIP() {
-    var x = document.getElementById("Text1");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+﻿
 
+var input ;
 
 let username = '9c41c813-28ab-4983-8b41-b7952d47294f';
 let password = 'ecca6627-8b67-4f0f-9e29-a1349bd54aea';
@@ -16,12 +11,18 @@ let headers = new Headers();
 headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
 
-fetch('https://exchange.xforce.ibmcloud.com/api/ipr/92.60.237.226', {method:'GET',
-        headers: headers,
-       })
-  .then(response => response.json())
-  .then(data => console.log(data));
-}
+
+
+
+
+function pretraziIP() {
+    var x = document.getElementById("Text1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+
 function pretraziFile() {
     var x = document.getElementById("File1");
     if (x.style.display === "none") {
@@ -46,11 +47,18 @@ function pretraziHash() {
         x.style.display = "none";
     }
 }
+function Search(){  
+    
+    input =select('#Text1');
+    var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
+    var url = api + input.value ;
 
-
-
-
-
+    fetch(url, {method:'GET',
+        headers: headers,
+       })
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
 
 function myFunction() {
     document.getElementById("demo").style.color = "red";
