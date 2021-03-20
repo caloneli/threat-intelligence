@@ -10,6 +10,12 @@ let headers = new Headers();
 //headers.append('Content-Type', 'text/json');
 headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
+
+
+let headers1 = new Headers();
+let APIkeyKineskiSajt = '470e89d7820e497d9691d60c04526d2ec8a23239c64943ddb75ac7df8a304742';
+headers1.set('Authorization', 'Basic ' + btoa(APIkeyKineskiSajt));
+
 var ip = document.getElementById("Text1");
 var file =document.getElementById("File1");
 var domain = document.getElementById("Domain1");
