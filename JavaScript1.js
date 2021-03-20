@@ -4,11 +4,14 @@
 
 let username = '9c41c813-28ab-4983-8b41-b7952d47294f';
 let password = 'ecca6627-8b67-4f0f-9e29-a1349bd54aea';
+let APIkeyKineskiSajt = '470e89d7820e497d9691d60c04526d2ec8a23239c64943ddb75ac7df8a304742';
 
 let headers = new Headers();
 
 //headers.append('Content-Type', 'text/json');
 headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
+
+
 
 var ip = document.getElementById("Text1");
 var file =document.getElementById("File1");
