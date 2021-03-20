@@ -1,7 +1,6 @@
 ﻿
 
 
-
 let username = '9c41c813-28ab-4983-8b41-b7952d47294f';
 let password = 'ecca6627-8b67-4f0f-9e29-a1349bd54aea';
 let APIkeyKineskiSajt = '470e89d7820e497d9691d60c04526d2ec8a23239c64943ddb75ac7df8a304742';
@@ -15,7 +14,7 @@ headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
 var ip = document.getElementById("Text1");
 var file =document.getElementById("File1");
-var domain = document.getElementById("Domanin1");
+var domain = document.getElementById("Domain1");
 var hash = document.getElementById("Hash1");
 ip.style.display="none";
 file.style.display="none";
@@ -55,32 +54,69 @@ function pretraziHash() {
         hash.style.display = "none";
     }
 }
-var promeni;
-
 function Search(){  
 
+    var Input ;
 
-    var inputIP = document.getElementById("Text1").value;
+    // Text Input 
+
+    if (document.getElementById("Text1").value != ""){
+     Input = document.getElementById("Text1").value;
+  
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + inputIP;
+    var url = api + Input;
     fetch(url, {method:'GET', 
         headers: headers,
-    })
-   .then(response => response.json())
-     //.then(data => console.log(data));
-    .then(data=>promeni)
-    
-    var element = document.getElementById("promeni");
-    element.innerHTML = promeni;
+       })
+    .then(response => response.json())
+    .then(data => console.log(data));
+    }
 
-    
+    // FILE INPUT 
+
+    if (document.getElementById("File1").value != ""){
+        Input = document.getElementById("File1").value;
+     
+       var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
+       var url = api + Input;
+       fetch(url, {method:'GET', 
+           headers: headers,
+          })
+       .then(response => response.json())
+       .then(data => console.log(data));
+       }
+
+
+    // DOMAIN INPUT
+
+    if (document.getElementById("Domain1").value != ""){
+        Input = document.getElementById("Domain1").value;
+     
+       var api = 'https://api.xforce.ibmcloud.com/url/'
+       var url = api + Input;
+       fetch(url, {method:'GET', 
+           headers: headers,
+          })
+       .then(response => response.json())
+       .then(data => console.log(data));
+       }
+
+
+    // HASH INPUT 
+
+    if (document.getElementById("Hash1").value != ""){
+        Input = document.getElementById("Hash1").value;
+     
+       var api = 'https://api.xforce.ibmcloud.com/malware/'
+       var url = api + Input;
+       fetch(url, {method:'GET', 
+           headers: headers,
+          })
+       .then(response => response.json())
+       .then(data => console.log(data));
+       }
 }
-//*let p = new Promise((resolve,reject) =>)
-
-
 
 function myFunction() {
     document.getElementById("demo").style.color = "red";
 }
-
-
