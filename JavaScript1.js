@@ -52,19 +52,29 @@ function pretraziHash() {
         hash.style.display = "none";
     }
 }
+var promeni;
+
 function Search(){  
 
 
     var inputIP = document.getElementById("Text1").value;
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
     var url = api + inputIP;
-   fetch(url, {method:'GET', 
+    fetch(url, {method:'GET', 
         headers: headers,
-       })
-  .then(response => response.json())
-  .then(data => console.log(data));
+    })
+   .then(response => response.json())
+     //.then(data => console.log(data));
+    .then(data=>promeni)
+    
+    var element = document.getElementById("promeni");
+    element.innerHTML = promeni;
+
     
 }
+//*let p = new Promise((resolve,reject) =>)
+
+
 
 function myFunction() {
     document.getElementById("demo").style.color = "red";
