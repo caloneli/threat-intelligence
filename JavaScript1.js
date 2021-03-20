@@ -48,12 +48,14 @@ function pretraziHash() {
     }
 }
 function Search(){  
-    
-    input =select('#Text1');
-    var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + input.value ;
 
-    fetch(url, {method:'GET',
+   // input =select('#Text1');
+   // var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
+  //  var url = api + input.value ;
+
+   //fetch(url, {method:'GET', 
+
+     fetch( 'https://exchange.xforce.ibmcloud.com/api/ipr/178.220.106.135', {method : 'GET',
         headers: headers,
        })
   .then(response => response.json())
