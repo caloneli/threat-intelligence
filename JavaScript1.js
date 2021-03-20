@@ -1,5 +1,5 @@
 ﻿function pretraziIP() {
-    var x = document.getElementById("kutije");
+    var x = document.getElementById("Text1");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -22,6 +22,31 @@ fetch('https://exchange.xforce.ibmcloud.com/api/ipr/92.60.237.226', {method:'GET
   .then(response => response.json())
   .then(data => console.log(data));
 }
+function pretraziFile() {
+    var x = document.getElementById("File1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+function pretraziDomain() {
+    var x = document.getElementById("Domain1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+function pretraziHash() {
+    var x = document.getElementById("Hash1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 
 
 
