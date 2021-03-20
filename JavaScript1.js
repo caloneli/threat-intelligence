@@ -10,42 +10,46 @@ let headers = new Headers();
 //headers.append('Content-Type', 'text/json');
 headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
-
-
-
-
+var ip = document.getElementById("Text1");
+var file =document.getElementById("File1");
+var domain = document.getElementById("Domanin1");
+var hash = document.getElementById("Hash1");
+ip.style.display="none";
+file.style.display="none";
+domain.style.display="none";
+hash.style.display="none";
 
 function pretraziIP() {
-    var x = document.getElementById("Text1");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    
+    if (ip.style.display == "none") {
+        ip.style.display = "block";
     } else {
-        x.style.display = "none";
+        ip.style.display = "none";
     }
 }
 
 function pretraziFile() {
-    var x = document.getElementById("File1");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    
+    if (file.style.display == "none") {
+        file.style.display = "block";
     } else {
-        x.style.display = "none";
+        file.style.display = "none";
     }
 }
 function pretraziDomain() {
-    var x = document.getElementById("Domain1");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    
+    if (domain.style.display == "none") {
+        domain.style.display = "block";
     } else {
-        x.style.display = "none";
+        domain.style.display = "none";
     }
 }
 function pretraziHash() {
-    var x = document.getElementById("Hash1");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    
+    if (hash.style.display == "none") {
+        hash.style.display = "block";
     } else {
-        x.style.display = "none";
+        hash.style.display = "none";
     }
 }
 function Search(){  

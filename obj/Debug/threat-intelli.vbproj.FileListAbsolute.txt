@@ -7,3 +7,12 @@ E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.vbproj.GenerateReso
 E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.dll
 E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.xml
 E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.pdb
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\bin\threat-intelli.dll.config
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\bin\threat-intelli.dll
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\bin\threat-intelli.pdb
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\bin\threat-intelli.xml
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\obj\Debug\threat_intelli.Resources.resources
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\obj\Debug\threat-intelli.vbproj.GenerateResource.Cache
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\obj\Debug\threat-intelli.dll
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\obj\Debug\threat-intelli.xml
+C:\Users\strahinja\Documents\GitHub\threat-intelligence\obj\Debug\threat-intelli.pdb
