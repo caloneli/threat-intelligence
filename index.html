@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="StyleSheet1.css" rel="stylesheet" />
     <title>threat-intelligence</title>
 </head>
@@ -18,15 +19,23 @@
         </div>
     </nav>
     <div class="container">
-        <h1>choose your TI</h1>
+        <h1>Search your IOC</h1>
         
         <button type="button" class="btn btn-primary" onclick="pretraziIP()">IP</button>
-        <button type="button" class="btn btn-primary">FILE</button>
-        <button type="button" class="btn btn-primary">Domain</button>
-        <button type="button" class="btn btn-primary">HASH</button>
-        <p id="demo" onclick="myFunction()">Click me to change my text color.</p>
-        <div id="kutije" display="none">
-            <input id="Text1" type="text" />
+        <button type="button" class="btn btn-primary" onclick="pretraziFile()">FILE</button>
+        <button type="button" class="btn btn-primary" onclick="pretraziDomain()">Domain</button>
+        <button type="button" class="btn btn-primary" onclick="pretraziHash()">HASH</button>
+        <button type="button" class="btn btn-primary">
+            
+            <img src = kita.png height="20" width="20" >
+        </button> 
+        <div id="kutije">
+
+            <input id="Text1" type="text" placeholder="Type your IP here" display="none" />
+            <input id="File1" type="file" placeholder="Drop your file here"display="none"/>
+            <input id="Domanin1" type="text" placeholder="Type your Domain here" display="none"/>
+            <input id="Hash1" type="number" placeholder="Type hash values here"display="none"/>
+
         </div>
     </div>
     

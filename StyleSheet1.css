@@ -1,7 +1,8 @@
 ﻿body {
-    background: #c51616;
+    background: #5f5e5e;
 }
 .container{
+    margin-left: 1px;
     
     
 }
@@ -9,5 +10,15 @@ h1{
     
 }
 .kutije{
-    
+    position: absolute;
+    top : 50% ;
+    width: 20px;
+    margin-top : 5px;
+}
+div#kutije input#Text1{
+    margin-top: 10px;
+    outline-style:solid;
+    outline-width: 3px;
+    outline-color: rgb(70, 70, 70);
+
 }
