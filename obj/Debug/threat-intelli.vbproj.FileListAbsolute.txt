@@ -1,0 +1,9 @@
+E:\TI\threat-intelli\threat-intelli\bin\threat-intelli.dll.config
+E:\TI\threat-intelli\threat-intelli\bin\threat-intelli.dll
+E:\TI\threat-intelli\threat-intelli\bin\threat-intelli.pdb
+E:\TI\threat-intelli\threat-intelli\bin\threat-intelli.xml
+E:\TI\threat-intelli\threat-intelli\obj\Debug\threat_intelli.Resources.resources
+E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.vbproj.GenerateResource.Cache
+E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.dll
+E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.xml
+E:\TI\threat-intelli\threat-intelli\obj\Debug\threat-intelli.pdb
