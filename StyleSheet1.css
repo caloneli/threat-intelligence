@@ -20,5 +20,22 @@ div#kutije input#Text1{
     outline-style:solid;
     outline-width: 3px;
     outline-color: rgb(70, 70, 70);
-
+}
+div#kutije input#File1{
+    margin-top: 10px;
+    outline-style:solid;
+    outline-width: 3px;
+    outline-color: rgb(70, 70, 70);
+}
+div#kutije input#Domain1{
+    margin-top: 10px;
+    outline-style:solid;
+    outline-width: 3px;
+    outline-color: rgb(70, 70, 70);
+}
+div#kutije input#Hash1{
+    margin-top: 10px;
+    outline-style:solid;
+    outline-width: 3px;
+    outline-color: rgb(70, 70, 70);
 }
