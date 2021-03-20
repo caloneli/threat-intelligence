@@ -58,21 +58,24 @@ function Search(){
 
     // Text Input 
 
-    if (document.getElementById("Text1").value != null){
-     Input = document.getElementById("Text1").value;
+    if (document.getElementById("Text1").value != null)
+    {
+        Input = document.getElementById("Text1").value;
   
-    var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + Input;
-    fetch(url, {method:'GET', 
-        headers: headers,
-       })
-    .then(response => response.json())
-    .then(data => console.log(data));
+        var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
+        var url = api + Input;
+             fetch(url, {method:'GET', 
+                 headers: headers,
+                 })
+                .then(response => response.json())
+            .then(data => console.log(data));
     }
 
     // FILE INPUT 
 
-    if (document.getElementById("File1").value != null){
+      if (document.getElementById("File1").value != null)
+
+    {
         Input = document.getElementById("File1").value;
      
        var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
@@ -82,12 +85,15 @@ function Search(){
           })
        .then(response => response.json())
        .then(data => console.log(data));
-       }
+    }
+
 
 
     // DOMAIN INPUT
 
-    if (document.getElementById("Domain1").value != null){
+    if (document.getElementById("Domain1").value != null)
+
+    {
         Input = document.getElementById("Domain1").value;
      
        var api = 'https://api.xforce.ibmcloud.com/url/'
@@ -97,12 +103,14 @@ function Search(){
           })
        .then(response => response.json())
        .then(data => console.log(data));
-       }
+    }
 
 
     // HASH INPUT 
 
-    if (document.getElementById("Hash1").value != null){
+    if (document.getElementById("Hash1").value != null)
+
+    {
         Input = document.getElementById("Hash1").value;
      
        var api = 'https://api.xforce.ibmcloud.com/malware/'
@@ -112,7 +120,8 @@ function Search(){
           })
        .then(response => response.json())
        .then(data => console.log(data));
-       }
+    }
+
 }
 
 function myFunction() {
