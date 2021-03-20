@@ -20,6 +20,10 @@ hash.style.display="none";
 
 function pretraziIP() {
     
+    
+    file.style.display="none";
+    domain.style.display="none";
+    hash.style.display="none";
     if (ip.style.display == "none") {
         ip.style.display = "block";
     } else {
@@ -28,7 +32,9 @@ function pretraziIP() {
 }
 
 function pretraziFile() {
-    
+    ip.style.display="none";   
+    domain.style.display="none";
+    hash.style.display="none";
     if (file.style.display == "none") {
         file.style.display = "block";
     } else {
@@ -36,7 +42,9 @@ function pretraziFile() {
     }
 }
 function pretraziDomain() {
-    
+    ip.style.display="none";
+    file.style.display="none";
+    hash.style.display="none";
     if (domain.style.display == "none") {
         domain.style.display = "block";
     } else {
@@ -44,7 +52,11 @@ function pretraziDomain() {
     }
 }
 function pretraziHash() {
-    
+
+    ip.style.display="none";
+    file.style.display="none";
+    domain.style.display="none";
+
     if (hash.style.display == "none") {
         hash.style.display = "block";
     } else {
@@ -66,8 +78,12 @@ function Search(){
         headers: headers,
        })
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+        console.log(data.score)
+        document.querySelector("#rezultat").innerText = "The TI score for this IP adress :" + Input + " is "  + data.score;
+    });
     }
+     //document.getElementById("rezultat").innerHTML = "Requested results for : " + Input ;
 
     // FILE INPUT 
 
@@ -96,7 +112,8 @@ function Search(){
            headers: headers,
           })
        .then(response => response.json())
-       .then(data => console.log(data));    
+       .then(data => console.log(data));   
+       document.getElementById("rezultat").innerHTML = "Requested results for : " + Input ; 
     }
     
 
@@ -113,7 +130,10 @@ function Search(){
           })
        .then(response => response.json())
        .then(data => console.log(data));
-       }
+       
+       document.getElementById("rezultat").innerHTML = "Requested results for : " + Input ;
+    }
+       
 }
 
 function myFunction() {
