@@ -14,7 +14,7 @@ headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
 var ip = document.getElementById("Text1");
 var file =document.getElementById("File1");
-var domain = document.getElementById("Domanin1");
+var domain = document.getElementById("Domain1");
 var hash = document.getElementById("Hash1");
 ip.style.display="none";
 file.style.display="none";
