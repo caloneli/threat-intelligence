@@ -54,15 +54,65 @@ function pretraziHash() {
 }
 function Search(){  
 
+    var Input ;
 
-    var inputIP = document.getElementById("Text1").value;
+    // Text Input 
+
+    if (document.getElementById("Text1").value != null){
+     Input = document.getElementById("Text1").value;
+  
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + inputIP;
-   fetch(url, {method:'GET', 
+    var url = api + Input;
+    fetch(url, {method:'GET', 
         headers: headers,
        })
-  .then(response => response.json())
-  .then(data => console.log(data));
+    .then(response => response.json())
+    .then(data => console.log(data));
+    }
+
+    // FILE INPUT 
+
+    if (document.getElementById("File1").value != null){
+        Input = document.getElementById("File1").value;
+     
+       var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
+       var url = api + Input;
+       fetch(url, {method:'GET', 
+           headers: headers,
+          })
+       .then(response => response.json())
+       .then(data => console.log(data));
+       }
+
+
+    // DOMAIN INPUT
+
+    if (document.getElementById("Domain1").value != null){
+        Input = document.getElementById("Domain1").value;
+     
+       var api = 'https://api.xforce.ibmcloud.com/url/'
+       var url = api + Input;
+       fetch(url, {method:'GET', 
+           headers: headers,
+          })
+       .then(response => response.json())
+       .then(data => console.log(data));
+       }
+
+
+    // HASH INPUT 
+
+    if (document.getElementById("Hash1").value != null){
+        Input = document.getElementById("Hash1").value;
+     
+       var api = 'https://api.xforce.ibmcloud.com/malware/'
+       var url = api + Input;
+       fetch(url, {method:'GET', 
+           headers: headers,
+          })
+       .then(response => response.json())
+       .then(data => console.log(data));
+       }
 }
 
 function myFunction() {
