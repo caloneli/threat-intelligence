@@ -1,6 +1,6 @@
 ﻿
 
-var input ;
+
 
 let username = '9c41c813-28ab-4983-8b41-b7952d47294f';
 let password = 'ecca6627-8b67-4f0f-9e29-a1349bd54aea';
@@ -49,9 +49,11 @@ function pretraziHash() {
     }
 }
 function Search(){  
-    input =select('#Text1');
+
+
+    var inputIP = document.getElementById("Text1").value;
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-    var url = api + input.value();
+    var url = api + inputIP;
    fetch(url, {method:'GET', 
         headers: headers,
        })
