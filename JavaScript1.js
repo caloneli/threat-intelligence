@@ -22,6 +22,7 @@ function pretraziIP() {
     } else {
         x.style.display = "none";
     }
+}
 
 function pretraziFile() {
     var x = document.getElementById("File1");
@@ -48,13 +49,10 @@ function pretraziHash() {
     }
 }
 function Search(){  
-
    // input =select('#Text1');
    // var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
-  //  var url = api + input.value ;
-
+   // var url = api + input.value ;
    //fetch(url, {method:'GET', 
-
      fetch( 'https://exchange.xforce.ibmcloud.com/api/ipr/178.220.106.135', {method : 'GET',
         headers: headers,
        })
@@ -65,3 +63,4 @@ function Search(){
 function myFunction() {
     document.getElementById("demo").style.color = "red";
 }
+
