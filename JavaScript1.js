@@ -79,9 +79,20 @@ function Search(){
        })
     .then(response => response.json())
     .then(data => {
-        console.log(data.score)
-        document.querySelector("#rezultat").innerText = "The TI score for this IP adress :" + Input + " is "  + data.score;
+        console.log(data)
+
+
+        // Ovde mozete da kucate "+ data.bilo sta sto ima samo jedan element posto kad uneses niz kao zaa history npr izbacuje samo OBJECT u browser"
+         
+        document.querySelector("#rezultat").innerText = "The TI score for this IP adress :" + data.ip + " is "  
+        + data.score + data.geo 
+        + data.country + data.history;
+
+        // OVO uzima celu datu i stavlja kao string ovako random kao na sajtu , a ovo pre toga moze da prikakze sve elemente koji nisu niz 
+        document.querySelector("#rezultat").innerHTML = JSON.stringify(data);
+
     });
+    
     }
      //document.getElementById("rezultat").innerHTML = "Requested results for : " + Input ;
 

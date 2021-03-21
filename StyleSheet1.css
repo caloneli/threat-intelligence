@@ -40,3 +40,6 @@ div#kutije input#Hash1{
     outline-width: 3px;
     outline-color: rgb(70, 70, 70);
 }
+div#kutije p#rezultat{
+    text-emphasis: 5px;
+}
