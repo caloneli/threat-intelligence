@@ -69,7 +69,8 @@ function Search(){
 
     // Text Input 
 
-    if (document.getElementById("Text1").value != ""){
+    if (document.getElementById("Text1").value != "")
+    {
      Input = document.getElementById("Text1").value;
   
     var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
@@ -80,16 +81,17 @@ function Search(){
     .then(response => response.json())
     .then(data => {
         console.log(data)
-
-
+      
         // Ovde mozete da kucate "+ data.bilo sta sto ima samo jedan element posto kad uneses niz kao zaa history npr izbacuje samo OBJECT u browser"
          
         document.querySelector("#rezultat").innerText = "The TI score for this IP adress :" + data.ip + " is "  
-        + data.score + data.geo 
-        + data.country + data.history;
+        + data.score 
+        document.querySelector("#Lokacija").innerText = "The location is : " +  data.geo.country;
+        
 
         // OVO uzima celu datu i stavlja kao string ovako random kao na sajtu , a ovo pre toga moze da prikakze sve elemente koji nisu niz 
-        document.querySelector("#rezultat").innerHTML = JSON.stringify(data);
+      //  document.querySelector("#rezultat").innerHTML = JSON.stringify(data);
+
 
     });
     
@@ -104,9 +106,16 @@ function Search(){
        var api = 'https://exchange.xforce.ibmcloud.com/api/ipr/'
        var url = api + Input;
        fetch(url, {method:'GET', 
-           headers: headers,
-          })
-       .then(response => response.json())
+        headers: headers,
+       })
+    .then(response => 
+    {
+         // if ok = false => error
+        if(!response.ok){
+            throw Error("Error");
+        } 
+        response.json()
+    })
        .then(data => console.log(data));
        }
 
@@ -120,9 +129,16 @@ function Search(){
        var api = 'https://api.xforce.ibmcloud.com/url/'
        var url = api + Input;
        fetch(url, {method:'GET', 
-           headers: headers,
-          })
-       .then(response => response.json())
+        headers: headers,
+       })
+    .then(response => 
+    {
+         // if ok = false => error
+        if(!response.ok){
+            throw Error("Error");
+        } 
+        response.json()
+    })
        .then(data => console.log(data));   
        document.getElementById("rezultat").innerHTML = "Requested results for : " + Input ; 
     }
@@ -137,9 +153,16 @@ function Search(){
        var api = 'https://api.xforce.ibmcloud.com/malware/'
        var url = api + Input;
        fetch(url, {method:'GET', 
-           headers: headers,
-          })
-       .then(response => response.json())
+        headers: headers,
+       })
+    .then(response => 
+    {
+         // if ok = false => error
+        if(!response.ok){
+            throw Error("Error");
+        } 
+        response.json()
+    })
        .then(data => console.log(data));
        
        document.getElementById("rezultat").innerHTML = "Requested results for : " + Input ;
